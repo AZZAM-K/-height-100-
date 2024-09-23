@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+body {
+  font-family: 'Epilogue';
+  background: var(--almost-white);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.nav-link {
+  color: var(--medium-gray);
+}
+.nav-link:hover {
+  color: var(--almost-black);
+}
+.buttons .btn {
+  border: 2px solid var(--medium-gray);
+  color: var(--medium-gray);
+}
+.buttons .btn:hover {
+  color: var(--almost-black);
+}
+.buttons .btn:first-of-type {
+  border: none;
+}
+.buttons .btn:last-of-type:hover {
+  border-color: var(--almost-black);
+}
+.buttons {
+  gap: 1em;
+}
+.dropdown-menu {
+  padding: 0.5em 1em;
+  border: none;
+}
+.dropdown-menu li {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+main {
+  display: flex;
+  gap: 6rem;
+  padding: 2rem 5rem;
+  width: 40rem;
+  height: fit-content;
+}
+.mobile-img {
+  display: none;
+  width: 100%;
+}
+main .desktop-img {
+  width: 100%;
+}
+main h1 {
+  color: var(--almost-black);
+  font-size: 4.1em;
+  font-weight: 600;
+  margin-top: 1em;
+  line-height: 1em;
+}
+main p {
+  color: var(--medium-gray);
+  font-size: 1.1em;
+}
+.client {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+main button {
+  background: var(--almost-black);
+  color: var(--almost-white);
+  border-radius: 10px;
+  border: 2px solid var(--almost-black);
+  padding: 0.5em 1em;
+}
+main button:hover {
+  color: var(--almost-black);
+  background: var(--almost-white);
+}
+@media (max-width: 754px) {
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+  main {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  .content {
+    padding-inline: 1em;
+    gap: 2em;
+  }
+  main button {
+    align-self: center;
+  }
+  .client {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
